@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>兴趣爱好</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=" stylesheet" href="Style.css">
+</head>
+<body>
+    <script>
+        window.onload = function () {
+            var box = this.document.getElementsByClassName("re")[0];
+            var lik = box.getElementsByTagName("li");
+            function fun(i, j) {//转换图片函数，就是把透明度改了一下
+                lik[i].style.opacity = 1;
+                lik[j].style.opacity = 0;
+                lik[i + 5].style.backgroundColor = "#ffffff";//改一下小图标
+                lik[j + 5].style.backgroundColor = "#00000000"
+            }
+            fun(0, 1);//初始化下
+            var i = 0;
+            function auto() {//轮播循环函数
+                if (++i >= 5) {
+                    i = 0;
+                    fun(0, 4);
+                }
+                else fun(i, i - 1);
+            }
+            timer = this.setInterval(auto, 2000);
+            box.onmouseover = function () { //鼠标划上去，停止轮播
+                console.log('good');
+                clearInterval(timer);
+            }
+            box.onmouseout = function () { //鼠标划出，继续轮播
+                timer = setInterval(auto, 2000); //调用定时器
+            }
+            var j = 0;
+            for (; j < 5; j++) {//点击小图标也可以转换图片
+                lik[j + 5].ind = j;
+                lik[j + 5].onclick = function () {
+                    fun(this.ind, i)
+                    i = this.ind;
+                }
+            }
+
+        }
+    </script>
+    <section>
+        <header>
+            <nav>
+                <h1>
+                    <a href="HTMLPage1.html"> <img src="lan.png"></a>
+                </h1>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="aboutme.html">关于我的</a></li>
+                    <li><a href="have.html">兴趣爱好</a></li>
+                    <li><a href="skill.html">有些技能</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <section class="who">
+        <h1>"极端专注于一件事<br />的生活理念<br />在我们的文化中<br />被过度浪漫化了"</h1>
+    </section>
+
+    <section class="common">
+        <dev class="info">
+            <h2>兴趣爱好我觉得还蛮多的<br />大概是因为<br />经常初次接触某个东西的时候<br />我会特别感兴趣<br />学到【我感觉我会了】<br />我就会觉得无聊了<br />当然还有很多我明知道我不会<br />但感觉无聊的东西</h2>
+            <h2>一些我推:<br />韦伯·维尔维特<br />杰西卡·爱德华<br />列夫·梅诗金</h2>
+            <h3>喜欢辐射（fallout）<br />但是对我来说新维加斯以后<br />辐射系列就再也没出过新东西了。<br />（嗯嗯</h3>
+            <h2>喜欢看<br />（我觉得有趣的有情节的）书<br />（但网文只看过全职高手sry）</h2>
+        </dev>
+        <div class="banner-container">
+            <!-- 轮播图圆点 -->
+            <input type="radio" name="radio-set" checked="checked" id="banner-control-1">
+            <a class="banner-nav-a" href="#banner01"></a>
+            <input type="radio" name="radio-set" id="banner-control-2">
+            <a class="banner-nav-a" href="#banner02"></a>
+            <input type="radio" name="radio-set" id="banner-control-3">
+            <a class="banner-nav-a" href="#banner03"></a>
+            <input type="radio" name="radio-set" id="banner-control-4">
+            <a class="banner-nav-a" href="#banner04"></a>
+            <div class="banner-img-container">
+                <img src="./img/banner01.png" alt="">
+                <img src="./img/banner02.png" alt="">
+                <img src="./img/banner03.png" alt="">
+                <img src="./img/banner04.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <h2>所以不扩扩我吗？</h2>
+    </footer>
+</body>
+</html>
