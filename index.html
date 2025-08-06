@@ -1,54 +1,42 @@
-<!DCTYPE html>
-
-<html lang="zh-cn" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>蓝橘树的电子简历</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=" stylesheet" href="Style.css">
+    <meta charset="UTF-8" />
+    <title>Lanjushu | Access My CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <SCRIPT LANGUAGE="JavaScript">
-    function password(pwd) {
-        if (pwd == "klklsys24678") {
-            window.open("cv.html");
-        }
-        else {
-            alert("密码错误!");
-        }
-    }
-    </script>
-    <header>
-        <nav>
-            <h1>
-                <a href="HTMLPage1.html"><img src="lan.png"></a>
-            </h1>
-        </nav>
-        <nav>
-            <ul>
-                <li><a href="aboutme.html">关于我的</a></li>
-                <li><a href="have.html">兴趣爱好</a></li>
-                <li><a href="skill.html">有些技能</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="who">
-        <h1>谁是蓝橘树</h1>
-        <h2>布鲁奥兰治·崔</h2>
-        <h4>Blueorange Tree</h4>
-    </section>
-    <section class="pc">
-    <h4>输入正确的口令可看求职简历</h4>
-    <form name=myform onsubmit="password(this.pwde.value)">
-        <input type="text" name="pwde" rows="1" size="20">
-        <input type="submit" name="submit" value="提交">
-</section>
-        <footer>
-            <h1>怎么联系蓝橘树</h1>
-            <h3>邮箱：1457928939@qq.com</h3>
-            <h4>想成为我的网友：+扣扣1457928939</h4>
-            <h5>快来扩我列吧！！！！！</h5>
-        </footer>
-</body>
 
-</html>
+<header>
+    <h1><a href="index.html"><img src="lan.png" alt="Logo" style="height: 60px;"></a></h1>
+    <nav>
+        <ul>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="who">
+        <h1>Who is Lanjushu?</h1>
+        <h2>Blueorange Tree</h2>
+        <p>This page contains my personal CV. Please enter the password to access it.</p>
+    </section>
+
+    <section class="pc">
+        <form onsubmit="verifyPassword(this.password.value); return false;">
+            <input type="password" name="password" placeholder="Enter password..." required />
+            <input type="submit" value="Submit" />
+        </form>
+    </section>
+</main>
+
+<footer>
+    <h2>Contact Me</h2>
+    <p>Email: 1457928939@qq.com</p>
+    <p>QQ: 1457928939</p>
+    <p>Let’s
+
