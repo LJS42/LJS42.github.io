@@ -1,47 +1,76 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于我的</title>
-    <link rel=" stylesheet" href="Style.css">
+    <title>Lanjushu | Personal Academic Homepage</title>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
 
-    <section>
-        <header>
-            <nav>
-                <h1>
-                    <a href="HTMLPage1.html"> <img src="lan.png"></a>
-                </h1>
-            </nav>
-            <nav>
-                <ul>
-                    <li><a href="aboutme.html">关于我的</a></li>
-                    <li><a href="have.html">兴趣爱好</a></li>
-                    <li><a href="skill.html">有些技能</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <h1>Lanjushu (LJS)</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm Jiasui, a student and independent developer with a background in Mathematics and Scientific Computing.  
+            I'm passionate about CRPGs, and game design, and I occasionally draw or work on visual aesthetics.  
+            Currently exploring academic and creative intersections between algorithms and interactive narratives.
+        </p>
     </section>
 
-    <section class="who">
-        <h1>"我想顺便提一下：<br />海涅曾断言<br />真实的自传<br />几乎是不可能的<br />人在谈到自己的时候<br />肯定会大量撒谎。"</h1>
+    <section id="projects">
+        <h2>Selected Projects</h2>
+        <ul>
+            <li>
+                <strong>One Night Ultimate Werewolf: Machine Crisis</strong> – A LAN multiplayer game written in Rust, combining deduction and deception with asynchronous networking.
+            </li>
+            <li>
+                <strong>Hnefatafl AI</strong> – An AI agent for the board game Hnefatafl using bitboards and alpha-beta pruning with parallel evaluation via Rayon.
+            </li>
+            <li>
+                <strong>Text-based Narrative Games</strong> – Interactive fiction exploring psychological and philosophical themes.
+            </li>
+        </ul>
     </section>
 
-    <section class="common">
-        <div class="info">
-            <h1>我是谁：蓝橘树、LJS</h1>
-            <h2>一些标签：臭学数学的、<br />（我自封的）独立游戏制作人、<br />有时候画画、<br />CRPG爱好者、Furry爱好者<br />（现在不经常看但以前经常）搞搞竞体</h2>
-            <h3>铁板鱿鱼是世界上最好吃的东西！</h3>
-            <h2>如果你扩我列<br />那我就会在你的扣扣空间里（？<br />高强度扣扣空间，但小窗会犯社恐</h2>
-        </div>
-        <img src="zhubao.jpg" alt="蓝橘树捏" />
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Rust, Python, C++(almost forget), HTML/CSS</li>
+            <li>Machine Learning, Deep Learning</li>
+            <li>Scientific Computing, Optimization</li>
+            <li>Game Design & Narrative Writing & Drawing</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>B.Sc. in Mathematics and Applied Mathematics – University of Birmingham</li>
+            <li>M.Sc. in Scientific Computing – Technische Universität Berlin</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: ?</p>
+        <p>GitHub: <a href="https://github.com/LJS42" target="_blank">LJS42</a></p>
     </section>
 
     <footer>
-        <h2>所以不扩扩我吗？</h2>
+        <p>Site designed with ❤️ by LJS</p>
     </footer>
 
 </body>

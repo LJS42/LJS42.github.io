@@ -1,46 +1,50 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>有些技能</title>
-    <link rel=" stylesheet" href="Style.css">
+    <meta charset="UTF-8" />
+    <title>Lanjushu | CV Access</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <section>
-        <header>
-            <nav>
-                <h1>
-                    <a href="HTMLPage1.html"> <img src="lan.png"></a>
-                </h1>
-            </nav>
-            <nav>
-                <ul>
-                    <li><a href="aboutme.html">关于我的</a></li>
-                    <li><a href="have.html">兴趣爱好</a></li>
-                    <li><a href="skill.html">有些技能</a></li>
-                </ul>
-            </nav>
-        </header>
-    </section>
 
+<header>
+    <h1><a href="index.html">Lanjushu</a></h1>
+    <nav>
+        <ul>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
     <section class="who">
-        <h1>想不到这里要写什么了<br/>真的很抱歉</h1>
+        <h2>Welcome to my academic homepage</h2>
+        <p>To access my full CV, please enter the password below:</p>
+        <form onsubmit="password(this.pwde.value); return false;">
+            <input type="password" name="pwde" placeholder="Enter password..." required />
+            <input type="submit" value="Submit" />
+        </form>
     </section>
+</main>
 
-    <section class="common">
-        <img src="zhubao.jpg" alt="蓝橘树捏" />
-        <div class="info">
-            <h2>会做静态网页：就像我现在做的这个<br />只会前端不会后端，所以只会静态的。</h2>
-            <h2>会画一些画剪一些视频，可以点击下面那个链接查看我的b站账号，有我的画和视频。</h2>
-            <a href="https://space.bilibili.com/10704850">蓝橘树的b站账号</a>
-            <h2>会做2d游戏，学了怎么用GODOT，GODOT很好用（。</h2>
-        </div>
-    </section>
+<footer>
+    <h3>Contact</h3>
+    <p>Email: ?</p>
+    <p>GitHub: <a href="https://github.com/LJS42" target="_blank">LJS42</a></p>
+</footer>
 
-    <footer>
-        <h2>所以不扩扩我吗？</h2>
-    </footer>
+<script>
+function password(pwd) {
+    if (pwd === "klklsys24678") {
+        window.location.href = "cv.html";
+    } else {
+        alert("Incorrect password.");
+    }
+}
+</script>
+
 </body>
 </html>
